@@ -1,8 +1,8 @@
 # portfolio
-The latest portfolio, Currently - 2025
+The latest portfolio, Currently - 2026
 
 Made by - Akmal Hakim Bin Azuan
-Date modified - 10/12/2025
+Date modified - 3/1/2026
 
 Purpose: To make my own portfolio to be seen to my employers.
 
