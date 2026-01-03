@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio_styles.css">
+    <title>Akmal's CV</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="pics/branding.png">
+
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="topnav">
+        <div class="logo">
+            <img src="pics/branding3.png" alt="Logo">
+            <div class="clock" id="clock">00:00:00</div>
+        </div>
+        <div class="nav-links">
+            <a href="main_page.html">Home</a>
+            <a href="workspace_page.html">Workspace</a>
+            <a href="portfolio_page.html">Portfolio</a>
+            <a href="contact_page.html">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="side-menu" id="sideMenu">
+            <a href="main_page.html">Home</a>
+            <a href="workspace_page.html">Workspace</a>
+            <a href="portfolio_page.html">Portfolio</a>
+            <a href="contact_page.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="slides">
+            <img src="pics/portfolio_img1.png" alt="Slide 1">
+        </div>
+    </div>
+
+    <button id="revealBtn" class="reveal-btn">Reveal CV</button>
+
+    <!-- Carousel 2 -->
+    <div id="cvContainer" class="hidden-section">
+        <div class="carousel">
+            <div class="slides">
+                <img src="pics/CV_Akmal.png" alt="Slide 1">     
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Hamburger menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Digital clock
+        function updateClock() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            clock.textContent = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Initialize all carousels
+        document.querySelectorAll('.carousel').forEach((carousel) => {
+
+        const slides = carousel.querySelector('.slides');
+        const nextBtn = carousel.querySelector('.next');
+        const prevBtn = carousel.querySelector('.prev');
+
+        // Skip if no navigation buttons (like your first carousel)
+        if (!nextBtn || !prevBtn) return;
+
+        const images = slides.children;
+        let index = 0;
+
+        function showSlide(i) {
+            if (i < 0) i = images.length - 1;
+            if (i >= images.length) i = 0;
+            index = i;
+            slides.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        nextBtn.addEventListener('click', () => showSlide(index + 1));
+        prevBtn.addEventListener('click', () => showSlide(index - 1));
+        });
+
+        // Reveal CV button
+        document.getElementById("revealBtn").addEventListener("click", function () {
+            const cvSection = document.getElementById("cvContainer");
+            cvSection.classList.add("revealed");
+
+            // Optionally hide the button after reveal
+            this.style.display = "none";
+        });
+
+    </script>
+</body>
+</html>

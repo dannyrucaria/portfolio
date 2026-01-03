@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mainpage_styles.css">
+    <title>Akmal's Web</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="pics/branding.png">
+
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="topnav">
+        <div class="logo">
+            <img src="pics/branding.png" alt="Logo">
+            <div class="clock" id="clock">00:00:00</div>
+        </div>
+        <div class="nav-links">
+            <a href="main_page.html">Home</a>
+            <a href="workspace_page.html">Workspace</a>
+            <a href="portfolio_page.html">Portfolio</a>
+            <a href="contact_page.html">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="side-menu" id="sideMenu">
+            <a href="main_page.html">Home</a>
+            <a href="workspace_page.html">Workspace</a>
+            <a href="portfolio_page.html">Portfolio</a>
+            <a href="contact_page.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="slides" id="slides">
+            <img src="pics/mp1.png" alt="Slide 1">
+            <img src="pics/mp2.png" alt="Slide 2">
+            <img src="pics/mp3.png" alt="Slide 3">
+            <img src="pics/mp4.png" alt="Slide 4">
+        </div>
+        <!-- Navigation buttons -->
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content-wrapper card-section">
+        <!-- Left: Your picture -->
+        <div class="content-left">
+            <img src="pics/frontpagepic.png" alt="My Picture">
+        </div>
+
+        <!-- Right: Text content -->
+        <div class="content-right">
+            <h1>Welcome to my landing page!</h1>
+            <p>My name is Akmal Hakim but my alias is “Adalwolfer”.
+            <br><br>
+            The highest qualification I have acquired is a 
+            Bachelor’s Degree in Computer Science with honors,
+            Majoring in Information and Technology under Soft Computing.
+            <br><br>
+            As a student in learning, I am willing to commit my dedicated hours
+            on mastering my skills and gaining experiences to further apply the
+            utmost highest quality into my works to promote my skillsets to any
+            organization.</p>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // Hamburger menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('sideMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Digital clock
+        function updateClock() {
+            const clock = document.getElementById('clock');
+            const now = new Date();
+            clock.textContent = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Carousel functionality
+        let currentIndex = 0;
+        const slides = document.getElementById('slides');
+        const totalSlides = slides.children.length;
+
+        function showSlide(index) {
+            // Wrap around
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentIndex = index;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() { showSlide(currentIndex + 1); }
+        function prevSlide() { showSlide(currentIndex - 1); }
+
+        // Auto-slide every 3 seconds
+        setInterval(() => { showSlide(currentIndex + 1); }, 5000);
+    </script>
+</body>
+</html>
