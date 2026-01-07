@@ -1,7 +1,29 @@
 /* General Reset */
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-body { background: #0280fece; }
+body {
+   min-height: 100vh;
+
+  --s: 200px;
+  --c1: #2e66ff;     /* blue */
+  --c2: #08d9d6;     /* cyan */
+  --c3: #0280fece;   /* darker blue */
+
+  background:
+    repeating-conic-gradient(
+      from 30deg,
+      #0000 0 120deg,
+      var(--c3) 0 180deg
+    )
+    calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+
+  background-size: var(--s) calc(var(--s) * 0.577); }
 
 /* Top Navigation */
 .topnav {
@@ -11,7 +33,10 @@ body { background: #0280fece; }
     background-color: #000;
     color: white;
     padding: 10px 20px;
-    position: relative;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -136,40 +161,64 @@ body { background: #0280fece; }
     text-align: center;
     margin: 20px;
 }
+
+/* Wrapper */
 .content-wrapper {
     display: flex;
-    flex-wrap: wrap; /* allows wrapping on small screens */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     max-width: 1000px;
     margin: 40px auto;
 }
 
-.content-left img {
-    width: 250px;      /* adjust size as needed */
+/* Reverse layout (optional class) */
+.content-wrapper.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Shared image styles */
+.content-image img {
+    width: 250px;
     height: auto;
-    border-radius: 10px; /* optional rounded corners */
+    border-radius: 10px;
     object-fit: cover;
 }
 
-.content-right {
+/* Text blocks */
+.content-text {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    text-align: left;
 }
 
-.content-right h1 {
+.content-text h1 {
     font-size: 32px;
-    color: #000;
     margin: 0;
+    color: #000;
 }
 
-.content-right p {
+.content-text p {
     font-size: 18px;
     color: #333;
+    line-height: 1.6;
 }
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-text {
+        text-align: center;
+    }
+}
+
 
 /* Card container */
 .card-section {

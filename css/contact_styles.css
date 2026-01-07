@@ -11,7 +11,10 @@ body { background: #fe8802ef; }
     background-color: #000;
     color: white;
     padding: 10px 20px;
-    position: relative;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -169,6 +172,49 @@ body { background: #fe8802ef; }
 .content-right p {
     font-size: 18px;
     color: #333;
+}
+
+/* Contact icons container */
+.contact-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Individual contact card */
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 14px 18px;
+    background: #f7f7f7;
+    border-radius: 15px;
+
+    text-decoration: none;
+    color: #000;
+    font-family: 'Orbitron', monospace;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.contact-card span {
+    font-size: 14px;
+}
+
+/* Hover effect */
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 /* Card container */
