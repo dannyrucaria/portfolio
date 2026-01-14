@@ -37,23 +37,17 @@
         </div>
     </div>
 
-    <!-- Carousel -->
-    <div class="carousel">
-        <div class="slides">
-            <img src="pics/portfolio_img1.png" alt="Slide 1">
-        </div>
+    <!-- CV -->
+    <div class="cv-wrapper" style="margin-top: 10px;">
+        <embed
+            id="cvEmbed"
+            src="files/CV_2026_AkmalHakimAzuan.pdf#view=Fit"
+            type="application/pdf"
+        />
     </div>
 
-    <button id="revealBtn" class="reveal-btn">Reveal CV</button>
 
-    <!-- Carousel 2 -->
-    <div id="cvContainer" class="hidden-section">
-        <div class="carousel">
-            <div class="slides">
-                <img src="pics/CV_Akmal.png" alt="Slide 1">     
-            </div>
-        </div>
-    </div>
+
 
     <script>
         // Hamburger menu toggle
@@ -104,6 +98,23 @@
             this.style.display = "none";
         });
 
+        function updateCVView() {
+        const embed = document.getElementById("cvEmbed");
+        if (!embed) return;
+
+        const basePDF = "files/CV_2026_AkmalHakimAzuan.pdf";
+
+        if (window.innerWidth <= 768) {
+            // Mobile → fit to width
+            embed.src = basePDF + "#view=Fit";
+        } else {
+            // Desktop → default (or FitV if you want)
+            embed.src = basePDF + "#view=Fit";
+        }
+        }
+
+        window.addEventListener("load", updateCVView);
+        window.addEventListener("resize", updateCVView);
     </script>
 </body>
 </html>
