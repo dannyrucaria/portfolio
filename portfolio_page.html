@@ -1,22 +1,24 @@
+<!-- ── PORTFOLIO PAGE ── -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/portfolio_styles.css">
-    <title>Akmal's CV</title>
-
-    <!-- Favicon -->
+    <title>Portfolio | Adalwolfer Technologies</title>
     <link rel="icon" type="image/png" href="pics/branding.png">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio_style.css">
 </head>
+
 <body>
-    <!-- Top Navigation -->
-    <div class="topnav">
-        <div class="logo">
-            <img src="pics/branding3.png" alt="Logo">
-            <div class="clock" id="clock">00:00:00</div>
+    <!-- ── NAV STARTS HERE ── -->
+    <nav class="topnav">
+        <div class="nav-logo">
+            <img src="pics/branding.png" alt="Adalwolfer Logo">
+            <div class="nav-brand">
+                Adalwolfer
+                <span>Technologies</span>
+            </div>
         </div>
         <div class="nav-links">
             <a href="main_page.html">Home</a>
@@ -24,10 +26,9 @@
             <a href="portfolio_page.html">Portfolio</a>
             <a href="contact_page.html">Contact</a>
         </div>
+        <div class="nav-clock" id="clock">00:00:00</div>
         <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div></div><div></div><div></div>
         </div>
         <div class="side-menu" id="sideMenu">
             <a href="main_page.html">Home</a>
@@ -35,86 +36,236 @@
             <a href="portfolio_page.html">Portfolio</a>
             <a href="contact_page.html">Contact</a>
         </div>
-    </div>
+    </nav>
+    <!-- ── NAV ENDS HERE ── -->
 
-    <!-- CV -->
-    <div class="cv-wrapper" style="margin-top: 10px;">
-        <embed
-            id="cvEmbed"
-            src="files/CV_2026_AkmalHakimAzuan.pdf#view=Fit"
-            type="application/pdf"
-        />
-    </div>
+    <!-- ── HERO STARTS HERE 
+    <section class="hero" id="home">
+        <div class="hero-card">
 
+            <div class="hero-text">
+                <h1>
+                    Digital <span>Portfolio</span><br>
+                    & Workspace Hub
+                </h1>
 
+                <p>
+                    A futuristic single-page portfolio experience combining project showcases,
+                    workspace tracking, development progress, project analytics, expandable
+                    explanations, and a professional embedded CV.
+                </p>
 
+                <div class="hero-buttons">
+                    <a href="#cv" class="btn-primary">View CV</a>
 
-    <script>
-        // Hamburger menu toggle
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
+                    <a href="#portfolio" class="btn-secondary">View Work & Portfolio</a>
+                    
+                </div>
+            </div>
 
-        // Digital clock
-        function updateClock() {
-            const clock = document.getElementById('clock');
-            const now = new Date();
-            clock.textContent = now.toLocaleTimeString();
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
+            <div class="bio-card">
+                <div class="bio-avatar-placeholder">
+                    <img src="pics/frontpagepic.png" alt="Profile Picture">
+                </div>
 
-        // Initialize all carousels
-        document.querySelectorAll('.carousel').forEach((carousel) => {
+                <div class="bio-details">
+                    <h3>Akmal Hakim Azuan</h3>
+                    <p>
+                        IT student and developer focused on UI/UX design, Java applications,
+                        database systems, and futuristic interactive portfolio experiences.
+                    </p>
+                </div>
+            </div>
 
-        const slides = carousel.querySelector('.slides');
-        const nextBtn = carousel.querySelector('.next');
-        const prevBtn = carousel.querySelector('.prev');
+        </div>
+    </section>
+     ── HERO ENDS HERE ── -->
 
-        // Skip if no navigation buttons (like your first carousel)
-        if (!nextBtn || !prevBtn) return;
+    <section class="section" id="cv">
+        <div class="section-container">
 
-        const images = slides.children;
-        let index = 0;
+            <h2 class="section-title">Curriculum Vitae</h2>
+            <p class="section-subtitle">
+                Embedded professional resume preview.
+            </p>
 
-        function showSlide(i) {
-            if (i < 0) i = images.length - 1;
-            if (i >= images.length) i = 0;
-            index = i;
-            slides.style.transform = `translateX(-${index * 100}%)`;
-        }
+            <div class="cv-wrapper">
+                <embed
+                    src="files/CV_2026_AkmalHakimAzuan.pdf#view=Fit"
+                    type="application/pdf"
+                >
+            </div>
 
-        nextBtn.addEventListener('click', () => showSlide(index + 1));
-        prevBtn.addEventListener('click', () => showSlide(index - 1));
-        });
+        </div>
+    </section>
 
-        // Reveal CV button
-        document.getElementById("revealBtn").addEventListener("click", function () {
-            const cvSection = document.getElementById("cvContainer");
-            cvSection.classList.add("revealed");
+<!--
+    <section class="section" id="workspace">
+        <div class="section-container">
 
-            // Optionally hide the button after reveal
-            this.style.display = "none";
-        });
+            <h2 class="section-title">Workspace Overview</h2>
+            <p class="section-subtitle">
+                Current active projects, development progress, and project status tracking.
+            </p>
 
-        function updateCVView() {
-        const embed = document.getElementById("cvEmbed");
-        if (!embed) return;
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h2>12</h2>
+                    <p>Projects Completed</p>
+                </div>
 
-        const basePDF = "files/CV_2026_AkmalHakimAzuan.pdf";
+                <div class="stat-card">
+                    <h2>5</h2>
+                    <p>Active Development Projects</p>
+                </div>
 
-        if (window.innerWidth <= 768) {
-            // Mobile → fit to width
-            embed.src = basePDF + "#view=Fit";
-        } else {
-            // Desktop → default (or FitV if you want)
-            embed.src = basePDF + "#view=Fit";
-        }
-        }
+                <div class="stat-card">
+                    <h2>4</h2>
+                    <p>Programming Languages</p>
+                </div>
 
-        window.addEventListener("load", updateCVView);
-        window.addEventListener("resize", updateCVView);
-    </script>
+                <div class="stat-card">
+                    <h2>2026</h2>
+                    <p>Portfolio Revision Build</p>
+                </div>
+            </div>
+
+            <div style="height:40px"></div>
+
+            <div class="table-wrapper">
+                <table class="workspace-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Status</th>
+                            <th>Technology</th>
+                            <th>Progress</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>GradCar AI</td>
+                            <td>In Development</td>
+                            <td>Java, SQLite</td>
+                            <td>70%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Interactive Portfolio</td>
+                            <td>Active</td>
+                            <td>HTML, CSS, JS</td>
+                            <td>88%</td>
+                        </tr>
+
+                        <tr>
+                            <td>Tracking System</td>
+                            <td>Completed</td>
+                            <td>PHP, Database</td>
+                            <td>100%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+-->
+
+<!--
+    <section class="section" id="portfolio">
+        <div class="section-container">
+
+            <h2 class="section-title">Portfolio Projects</h2>
+            <p class="section-subtitle">
+                Featured development works, concepts, and production showcases.
+            </p>
+
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search projects...">
+            </div>
+
+            <div class="project-grid" id="projectGrid">
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="pics/project1.jpg" alt="Project">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-tag">AI Recommendation System</div>
+                        <h3>GradCar</h3>
+                        <p>
+                            AI-based Malaysian car recommendation system using SQLite,
+                            smart filtering, and user preference analysis.
+                        </p>
+
+                        <div class="read-more">Read More</div>
+
+                        <div class="project-extra">
+                            Includes database management, recommendation logic,
+                            responsive UI planning, analytics, and future hybrid AI support.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="pics/project2.jpg" alt="Project">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-tag">Web Development</div>
+                        <h3>Interactive Portfolio</h3>
+                        <p>
+                            Modern responsive portfolio with futuristic visuals,
+                            animated sections, expandable workspace panels, and project showcases.
+                        </p>
+
+                        <div class="read-more">Read More</div>
+
+                        <div class="project-extra">
+                            Features glassmorphism styling, dynamic cards,
+                            embedded CV systems, and modular page architecture.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="pics/project3.jpg" alt="Project">
+                    </div>
+
+                    <div class="project-content">
+                        <div class="project-tag">Database System</div>
+                        <h3>Tracking Website</h3>
+                        <p>
+                            Internship-based tracking platform for handling confidential information
+                            and structured monitoring systems.
+                        </p>
+
+                        <div class="read-more">Read More</div>
+
+                        <div class="project-extra">
+                            Focused on system structure, user organization,
+                            database handling, and collaborative workflow management.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+-->
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <span>ADALWOLFER TECHNOLOGIES</span> · PORTFOLIO · © 2026
+    </footer>
+
+    <!-- ── SCRIPT ── -->
+    <script src="js/portfolio_script.js"></script>
 </body>
+
 </html>

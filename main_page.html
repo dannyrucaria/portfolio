@@ -1,22 +1,24 @@
+<!-- ── MAIN PAGE ── -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/mainpage_styles.css">
-    <title>Akmal's Web</title>
-
-    <!-- Favicon -->
+    <title>Home | Adalwolfer Technologies</title>
     <link rel="icon" type="image/png" href="pics/branding.png">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main_style.css">
 </head>
+
 <body>
-    <!-- Top Navigation -->
-    <div class="topnav">
-        <div class="logo">
-            <img src="pics/branding.png" alt="Logo">
-            <div class="clock" id="clock">00:00:00</div>
+    <!-- ── NAV STARTS HERE ── -->
+    <nav class="topnav">
+        <div class="nav-logo">
+            <img src="pics/branding.png" alt="Adalwolfer Logo">
+            <div class="nav-brand">
+                Adalwolfer
+                <span>Technologies</span>
+            </div>
         </div>
         <div class="nav-links">
             <a href="main_page.html">Home</a>
@@ -24,10 +26,9 @@
             <a href="portfolio_page.html">Portfolio</a>
             <a href="contact_page.html">Contact</a>
         </div>
+        <div class="nav-clock" id="clock">00:00:00</div>
         <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div></div><div></div><div></div>
         </div>
         <div class="side-menu" id="sideMenu">
             <a href="main_page.html">Home</a>
@@ -35,117 +36,417 @@
             <a href="portfolio_page.html">Portfolio</a>
             <a href="contact_page.html">Contact</a>
         </div>
-    </div>
+    </nav>
+    <!-- ── NAV ENDS HERE ── -->
 
-    <!-- Carousel -->
-    <div class="carousel">
-        <div class="slides" id="slides">
-            <img src="pics/mp1.png" alt="Slide 1">
-            <img src="pics/mp2.png" alt="Slide 2">
-            <img src="pics/mp3.png" alt="Slide 3">
-            <img src="pics/mp4.png" alt="Slide 4">
-        </div>
-        <!-- Navigation buttons -->
-        <button class="prev" onclick="prevSlide()">&#10094;</button>
-        <button class="next" onclick="nextSlide()">&#10095;</button>
-    </div>
+    <!-- ── HERO STARTS HERE ── -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
 
-    <div class="page-padding">
-        <!-- Page Content -->
-        <div class="content-wrapper card-section">
-            <!-- Left: Your picture -->
-            <div class="content-image">
-                <img src="pics/frontpagepic.png" alt="My Picture">
-            </div>
+        <!-- Wolf SVG watermark -->
+        <svg class="hero-wolf-bg" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+            <!-- Stylised wolf head silhouette -->
+            <path fill="#00d4ff" d="M100 20 L120 10 L140 30 L150 20 L160 50 L155 70 L170 80 L160 90 L165 110 L150 105 L145 120 L130 115 L125 130 L100 140 L75 130 L70 115 L55 120 L50 105 L35 110 L40 90 L30 80 L45 70 L40 50 L50 20 L60 30 L80 10 Z"/>
+            <ellipse cx="78" cy="80" rx="10" ry="12" fill="#060810"/>
+            <ellipse cx="122" cy="80" rx="10" ry="12" fill="#060810"/>
+            <path d="M88 105 Q100 115 112 105" stroke="#060810" stroke-width="3" fill="none"/>
+        </svg>
 
-            <!-- Right: Text content -->
-            <div class="content-text">
-                <h1>Welcome to my landing page!</h1>
-                <p>My name is Akmal Hakim but my alias is “Adalwolfer”.
-                <br><br>
-                The highest qualification I have acquired is a 
-                Bachelor’s Degree in Computer Science with honors,
-                Majoring in Information and Technology under Soft Computing.
-                <br><br>
-                As a student in learning, I am willing to commit my dedicated hours
-                on mastering my skills and gaining experiences to further apply the
-                utmost highest quality into my works to promote my skillsets to any
-                organization.</p>
+        <div class="hero-content">
+            <p class="hero-eyebrow">// INITIALIZING PROFILE — UNIT ADALWOLFER</p>
+            <h1 class="hero-title">AKMAL HAKIM <span class="accent">AZUAN</span></h1>
+            <p class="hero-subtitle">Adalwolfer Technologies</p>
+            <p class="hero-tagline">
+                Computer Science graduate specializing in Information Technology &amp; Soft Computing.
+                Building reliable, adaptive systems at the intersection of precision and innovation.
+            </p>
+            <div class="hero-cta">
+                <a href="workspace_page.html" class="btn btn-primary">View Workspace</a>
+                <a href="portfolio_page.html" class="btn btn-outline">Download CV</a>
             </div>
         </div>
+        <div class="scroll-hint">SCROLL</div>
+    </section>
+    <!-- ── HERO ENDS HERE ── -->
 
-        <!-- Page Content -->
-        <div class="content-wrapper card-section">
-                    <!-- Right: Text content -->
-            <div class="content-text">
-                <h1>My Ambitions, Goals and Vision</h1>
+<div class="section-divider"></div>
+
+    <!-- ── BIO SECTION STARTS HERE ── -->
+    <section class="section reveal" id="bio">
+        <p class="section-label">Identity Matrix</p>
+        <h2 class="section-title">Who I Am</h2>
+        <div class="bio-grid">
+            <div>
+                <div class="bio-card">
+                    <!-- Replace src with your actual photo: pics/frontpagepic.png -->
+                    <div class="bio-avatar-placeholder">
+                        <img src="pics/avatar.png" alt="Profile Picture">
+                    </div>
+                    <div class="bio-name">AKMAL HAKIM AZUAN</div>
+                    <div class="bio-alias">@ Adalwolfer</div>
+                    <div class="bio-tags">
+                        <span class="tag">BSc Computer Science</span>
+                        <span class="tag">IT &amp; Soft Computing</span>
+                        <span class="tag">IT Hardware Repair</span>
+                        <span class="tag">Android Developer</span>
+                    </div>
+                    <div class="bio-detail">
+                        DA (Auto) &amp; B2 (Moto) Licensed<br>
+                        2025 Proton Persona 1.6 CVT Premium<br>
+                        2023 Honda RS150R
+                    </div>
+                </div>
+            </div>
+            <div class="bio-text">
+                <h3>// IT EXECUTIVE</h3>
                 <p>
-                Ever since I was a child, I yearned to study all about computers.
-                From tinkering to my own built PC to working with the softwares like Blender and Linux Ubuntu.
-                <br><br>
-                My goals are simply to become the most reliable and adaptive IT person, producing quality products with regards to detail and functionality.</p>
-            </div>
-
-            <!-- Left: Your picture -->
-            <div class="content-image">
-                <img src="pics/frontpagepic2.png" alt="My Picture">
+                    My name is Akmal Hakim — alias <strong style="color:var(--wolf-accent)">Adalwolfer</strong>.
+                    I hold a Bachelor's Degree in Computer Science with Honours, majoring in
+                    Information and Technology under Soft Computing.
+                </p>
+                <p>
+                    Ever since I was a child I've been drawn to computers — from building my own PC,
+                    to running Blender and Linux Ubuntu. My goal is to become the most reliable and
+                    adaptive IT person, producing quality work with careful attention to detail and functionality.
+                </p>
+                <div class="bio-details-grid">
+                    <div class="bio-detail-item">
+                        <span class="label">Education</span>
+                        <span class="value">Bachelor's Degree (Hons.) Computer Science</span>
+                    </div>
+                    <div class="bio-detail-item">
+                        <span class="label">Major</span>
+                        <span class="value">IT &amp; Soft Computing</span>
+                    </div>
+                    <div class="bio-detail-item">
+                        <span class="label">Specialization</span>
+                        <span class="value">Web Development · Hardware Repair · Android Studio</span>
+                    </div>
+                    <div class="bio-detail-item">
+                        <span class="label">Base</span>
+                        <span class="value">Shah Alam, Malaysia</span>
+                    </div>
+                    <div class="bio-detail-item">
+                        <span class="label">Licenses</span>
+                        <span class="value">DA (Auto) &amp; B2 (Motorcycle)</span>
+                    </div>
+                    <div class="bio-detail-item">
+                        <span class="label">Status</span>
+                        <span class="value" style="color:var(--wolf-accent)">Working @ Jopami Sdn. Bhd.</span>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+    <!-- ── BIO SECTION ENDS HERE ── -->
 
-        <!-- Page Content -->
-        <div class="content-wrapper card-section">
-            <!-- Left: Your picture -->
-            <div class="content-image">
-                <img src="pics/frontpagepic3.png" alt="My Picture">
+<div class="section-divider"></div>
+
+    <!-- ── SKILLS SECTION STARTS HERE ── -->
+    <section class="section reveal" id="skills">
+        <p class="section-label">Capability Matrix</p>
+        <h2 class="section-title">Technical Skillset</h2>
+        <div class="skills-grid">
+
+            <div class="skill-category">
+                <div class="skill-cat-title">// Languages</div>
+                <div class="skill-item">
+                    <span class="skill-name">Java</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Python</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.78"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">C++</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.70"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">C</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.65"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">SQL</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.72"></div></div>
+                </div>
             </div>
 
-            <!-- Right: Text content -->
-            <div class="content-text">
-                <h1>My Licenses</h1>
-                <p>I do have both DA (Auto Car) and B2 (Motor) Licenses.
-                <br><br>
-                I use a 2025 Proton Persona 1.6 CVT Premium Car.
-                <br>
-                As for my motorcycle, I use a 2023 Honda RS150R.
+            <div class="skill-category">
+                <div class="skill-cat-title">// Web</div>
+                <div class="skill-item">
+                    <span class="skill-name">HTML5</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.90"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">CSS3</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.72"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">PHP</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.55"></div></div>
+                </div>
             </div>
+
+            <div class="skill-category">
+                <div class="skill-cat-title">// Robotics &amp; AI</div>
+                <div class="skill-item">
+                    <span class="skill-name">ROS2</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Gazebo Sim</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">RViz2</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.75"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Fuzzy Logic</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.82"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="skill-cat-title">// Tools &amp; Platforms</div>
+                <div class="skill-item">
+                    <span class="skill-name">Linux (Ubuntu)</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.85"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Android Studio</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.80"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Blender</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.68"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">Git / GitHub</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.74"></div></div>
+                </div>
+                <div class="skill-item">
+                    <span class="skill-name">SQLite</span>
+                    <div class="skill-bar-wrap"><div class="skill-bar" style="--w:0.76"></div></div>
+                </div>
+            </div>
+
         </div>
-    </div>
-</div>
+    </section>
+    <!-- ── SKILLS SECTION ENDS HERE ── -->
 
-    <script>
-        // Hamburger menu toggle
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
+<div class="section-divider"></div>
 
-        // Digital clock
-        function updateClock() {
-            const clock = document.getElementById('clock');
-            const now = new Date();
-            clock.textContent = now.toLocaleTimeString();
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
+    <!-- ── TIMELINE / EXPERIENCE STARTS HERE ── -->
+    <section class="section reveal" id="experience">
+        <p class="section-label">Operational Log</p>
+        <h2 class="section-title">Experience &amp; Milestones</h2>
 
-        // Carousel functionality
-        let currentIndex = 0;
-        const slides = document.getElementById('slides');
-        const totalSlides = slides.children.length;
+        <div class="timeline-wrapper">
+            <!-- Track with animated dot -->
+            <div class="timeline-track" id="timelineTrack">
+                <div class="timeline-dot-traveller"></div>
+                <div class="year-marker active" data-year="2022" onclick="selectYear('2022')">
+                    <div class="year-dot"></div>
+                    <div class="year-label">2022</div>
+                </div>
+                <div class="year-marker" data-year="2023" onclick="selectYear('2023')">
+                    <div class="year-dot"></div>
+                    <div class="year-label">2023</div>
+                </div>
+                <div class="year-marker" data-year="2024" onclick="selectYear('2024')">
+                    <div class="year-dot"></div>
+                    <div class="year-label">2024</div>
+                </div>
+                <div class="year-marker" data-year="2025" onclick="selectYear('2025')">
+                    <div class="year-dot"></div>
+                    <div class="year-label">2025</div>
+                </div>
+                <div class="year-marker" data-year="2026" onclick="selectYear('2026')">
+                    <div class="year-dot"></div>
+                    <div class="year-label">2026</div>
+                </div>
+            </div>
 
-        function showSlide(index) {
-            // Wrap around
-            if (index < 0) index = totalSlides - 1;
-            if (index >= totalSlides) index = 0;
-            currentIndex = index;
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
+            <!-- Year panels -->
+            <div class="exp-panel active" id="panel-2022">
+                <div class="exp-card">
+                    <div class="exp-badge">Education</div>
+                    <div class="exp-date">AUG 2022 - FEB 2023</div>
+                    <div class="exp-title">Diploma — Computer Science</div>
+                    <div class="exp-org">Universiti Teknologi MARA (UiTM) - Arau, Perlis</div>
+                    <div class="exp-desc">
+                        Commenced Diploma in Computer Science, majoring in Information Technology. Began foundational studies in fundamentals of programming, database, and application development.
+                    </div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-badge">Internship</div>
+                    <div class="exp-date">SEP 2022 - FEB 2023</div>
+                    <div class="exp-title">IT Website Developer (UTV i-Track)</div>
+                    <div class="exp-org">UiTM TechnoVenture Sdn. Bhd.</div>
+                    <div class="exp-desc">
+                        Developed the UTV i-Track document tracking system for efficient management and monitoring of internal documents. Utilized cPanel, MySQL, Java, and PHP in full-stack development tasks. Worked collaboratively within a team following the Waterfall software development lifecycle, gaining experience in requirement analysis, system design, implementation, and testing across both frontend and backend development.
+                    </div>
+                </div>
+            </div>
+            <div class="exp-panel" id="panel-2023">
+                <div class="exp-card">
+                    <div class="exp-badge">Education</div>
+                    <div class="exp-date">MAR 2023 - FEB 2023</div>
+                    <div class="exp-title">Bachelor's Degree — Computer Science</div>
+                    <div class="exp-org">Universiti Teknologi MARA (UiTM) - Shah Alam, Selangor</div>
+                    <div class="exp-desc">Commenced BSc (Hons) in Computer Science, majoring in Information Technology under Soft Computing. Began foundational studies in programming, data structures, and networking.</div>
+                </div>
+                
+                <div class="exp-card">
+                    <div class="exp-badge">Academic</div>
+                    <div class="exp-date">2023</div>
+                    <div class="exp-title">Core Coursework &amp; Foundations</div>
+                    <div class="exp-org">UiTM</div>
+                    <div class="exp-desc">Deepened knowledge in Java, C++, databases (SQL/SQLite), and web technologies (HTML, CSS, PHP). Built early Android Studio projects and started exploring Linux environments.</div>
+                </div>
+            </div>
 
-        function nextSlide() { showSlide(currentIndex + 1); }
-        function prevSlide() { showSlide(currentIndex - 1); }
+            <div class="exp-panel" id="panel-2024">
+                <div class="exp-card">
+                    <div class="exp-badge">FYP</div>
+                    <div class="exp-date">2024 — 2025</div>
+                    <div class="exp-title">Final Year Project — Car Recommendation System</div>
+                    <div class="exp-org">UiTM</div>
+                    <div class="exp-desc">Developed an Android mobile application using Java, SQLite, and Fuzzy Logic decision-making to provide ranked and explainable car recommendations based on user lifestyle inputs.</div>
+                </div>
+            </div>
+            <div class="exp-panel" id="panel-2025">
+                <div class="exp-card">
+                    <div class="exp-badge">Internship</div>
+                    <div class="exp-date">MAR 2025 — JUN 2025</div>
+                    <div class="exp-title">IT Intern, System Administrator</div>
+                    <div class="exp-org">Efficient Global IT Sdn. Bhd.</div>
+                    <div class="exp-desc">
+                        Delivered Level 1–2 IT support across server and end-user environments, including Active Directory administration and system troubleshooting. Managed incident reporting and documentation aligned with SLA/SLOA requirements, while supporting software and firmware maintenance to ensure system stability and uptime.
+                    </div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-badge">Programme</div>
+                    <div class="exp-date">SEP 2025 — JAN 2026</div>
+                    <div class="exp-title">K-Youth Development Programme</div>
+                    <div class="exp-org">MTDC</div>
+                    <div class="exp-desc">Participated in the K-Youth Development Programme under the Ministry of Youth and Sports Malaysia, developing professional and technical competencies alongside national youth peers.</div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-badge">Robotics</div>
+                    <div class="exp-date">2025</div>
+                    <div class="exp-title">ROS2 Miniature Patrol Car — Gazebo Simulation</div>
+                    <div class="exp-org">Personal / Academic Project</div>
+                    <div class="exp-desc">Designed a semi-autonomous mobile robot in a Gazebo Gotham-inspired environment. Integrated LiDAR and vision sensors, autonomous navigation, and optional human intervention control.</div>
+                </div>
+            </div>
 
-        // Auto-slide every 3 seconds
-        setInterval(() => { showSlide(currentIndex + 1); }, 5000);
-    </script>
+            <div class="exp-panel" id="panel-2026">
+                <div class="exp-card">
+                    <div class="exp-badge">Graduation</div>
+                    <div class="exp-date">2026</div>
+                    <div class="exp-title">BSc (Hons) Computer Science — Graduated</div>
+                    <div class="exp-org">UiTM</div>
+                    <div class="exp-desc">Completed Bachelor's Degree in Computer Science with Honours, specializing in IT and Soft Computing. Capping years of academic and hands-on technical development.</div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-badge">Working Experience</div>
+                    <div class="exp-date">JAN 2026 — AUGUST 2026</div>
+                    <div class="exp-title">☆ IT Executive</div>
+                    <div class="exp-org">Jopami Sdn. Bhd.</div>
+                    <div class="exp-desc">
+                        Managed business IT infrastructure including servers, networks, CCTV systems, printers, and end-user support.
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-badge">Website Development</div>
+                    <div class="exp-date">JAN 2026 - APRIL 2026</div>
+                    <div class="exp-title">Lead of IT WebDev - majid.com.my, test.jopami.com.my</div>
+                    <div class="exp-org">Jopami Sdn. Bhd.</div>
+                    <div class="exp-desc">
+                        Made the company website for both Jopami Group Of Companies Sdn. Bhd. and Majid & Associates Sdn. Bhd. using HTML, CSS, Java, & PHP. Hosted using cPanel. 
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-badge">Server Management</div>
+                    <div class="exp-date">MARCH 2026 - APRIL 2026</div>
+                    <div class="exp-title">RAID 1 System Server Configuration</div>
+                    <div class="exp-org">Jopami Sdn. Bhd.</div>
+                    <div class="exp-desc">
+                        Maintained Windows Server environments, storage systems, shared resources, user access controls, and routine system maintenance.
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-badge">Data Protection</div>
+                    <div class="exp-date">APRIL - MAY 2026</div>
+                    <div class="exp-title">Backup & Recovery Solutions</div>
+                    <div class="exp-org">Business Continuity</div>
+                    <div class="exp-desc">
+                        Configured RAID 1 storage redundancy, automated backup schedules, data migration procedures, and recovery documentation.
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-badge">CCTV Systems</div>
+                    <div class="exp-date">MAY - JUNE 2026</div>
+                    <div class="exp-title">Surveillance Infrastructure</div>
+                    <div class="exp-org">Security Operations</div>
+                    <div class="exp-desc">
+                        Managed CCTV deployments, DVR/NVR configurations, remote monitoring access, troubleshooting, and surveillance maintenance.
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-badge">Networking</div>
+                    <div class="exp-date">2026</div>
+                    <div class="exp-title">Network Administration</div>
+                    <div class="exp-org">Connectivity & Services</div>
+                    <div class="exp-desc">
+                        Diagnosed network issues, maintained connectivity services, configured shared resources, and supported business-critical operations.
+                    </div>
+                </div>
+
+                <div class="exp-card">
+                    <div class="exp-badge">Documentation</div>
+                    <div class="exp-date">JUNE 2026 - AUG 2026</div>
+                    <div class="exp-title">Technical Documentation</div>
+                    <div class="exp-org">Knowledge Management</div>
+                    <div class="exp-desc">
+                        Produced system documentation, maintenance guides, inventories, and handover materials to improve operational continuity.
+                    </div>
+                </div>
+                <div class="exp-card">
+                    <div class="exp-badge">Active</div>
+                    <div class="exp-date">2026 — PRESENT</div>
+                    <div class="exp-title">Seeking Opportunities</div>
+                    <div class="exp-org">Open to Industry</div>
+                    <div class="exp-desc">Actively pursuing roles in software development, robotics, AI systems, or IT. Available for full-time positions, internships, and freelance technical projects. Let's build something.</div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ── TIMELINE / EXPERIENCE ENDS HERE ── -->
+
+<div class="section-divider"></div>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <span>ADALWOLFER TECHNOLOGIES</span> &nbsp;·&nbsp; Akmal Hakim Azuan &nbsp;·&nbsp; Malaysia &nbsp;·&nbsp; <span id="footerYear"></span>
+    </footer>
+
+    <!-- ── SCRIPT ── -->
+    <script src="js/main_script.js"></script>
 </body>
+
 </html>

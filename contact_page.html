@@ -1,22 +1,24 @@
+<!-- ── CONTACT PAGE ── -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/contact_styles.css">
-    <title>Akmal's Web</title>
-
-    <!-- Favicon -->
+    <title>Contact | Adalwolfer Technologies</title>
     <link rel="icon" type="image/png" href="pics/branding.png">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/contact_style.css">
 </head>
+
 <body>
-    <!-- Top Navigation -->
-    <div class="topnav">
-        <div class="logo">
-            <img src="pics/branding4.png" alt="Logo">
-            <div class="clock" id="clock">00:00:00</div>
+    <!-- ── NAV STARTS HERE ── -->
+    <nav class="topnav">
+        <div class="nav-logo">
+            <img src="pics/branding.png" alt="Adalwolfer Logo">
+            <div class="nav-brand">
+                Adalwolfer
+                <span>Technologies</span>
+            </div>
         </div>
         <div class="nav-links">
             <a href="main_page.html">Home</a>
@@ -24,10 +26,9 @@
             <a href="portfolio_page.html">Portfolio</a>
             <a href="contact_page.html">Contact</a>
         </div>
+        <div class="nav-clock" id="clock">00:00:00</div>
         <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div></div><div></div><div></div>
         </div>
         <div class="side-menu" id="sideMenu">
             <a href="main_page.html">Home</a>
@@ -35,66 +36,157 @@
             <a href="portfolio_page.html">Portfolio</a>
             <a href="contact_page.html">Contact</a>
         </div>
-    </div>
+    </nav>
+    <!-- ── NAV ENDS HERE ── -->
 
-    <!-- Carousel -->
-    <div class="carousel">
-        <div class="slides" id="slides">
-            <img src="pics/contacts_img1.png" alt="Slide 1">
+    <!-- ── HERO STARTS HERE ── -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+
+        <div class="contact-wrapper">
+
+            <!-- LEFT -->
+
+            <div class="contact-left">
+
+                <div class="contact-eyebrow">
+                    // COMMUNICATION INTERFACE ONLINE
+                </div>
+
+                <h1 class="contact-title">
+                    Contact <span>Network</span>
+                </h1>
+
+                <p class="contact-subtitle">
+                    Access all official communication channels,
+                    social platforms, development repositories,
+                    and professional networks connected to
+                    Adalwolfer Technologies.
+                </p>
+
+                <div class="contact-grid">
+
+                    <a href="https://youtube.com/@akmalhakimazuan/"
+                    target="_blank"
+                    class="contact-card">
+
+                        <img src="pics/youtube.png" alt="YouTube">
+                        <span>YouTube</span>
+
+                    </a>
+
+                    <a href="https://instagram.com/dannyrucariaworks/"
+                    target="_blank"
+                    class="contact-card">
+
+                        <img src="pics/instagram.png" alt="Instagram">
+                        <span>Instagram</span>
+
+                    </a>
+
+                    <a href="mailto:akmalhakimazuan@gmail.com"
+                    class="contact-card">
+
+                        <img src="pics/gmail.png" alt="Gmail">
+                        <span>Gmail</span>
+
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/akmal-hakim-azuan-37435533a/"
+                    target="_blank"
+                    class="contact-card">
+
+                        <img src="pics/linkedin.png" alt="LinkedIn">
+                        <span>LinkedIn</span>
+
+                    </a>
+
+                    <a href="https://github.com/dannyrucaria/"
+                    target="_blank"
+                    class="contact-card">
+
+                        <img src="pics/github.png" alt="GitHub">
+                        <span>GitHub</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+
+            <div class="contact-panel">
+
+                <div class="panel-label">
+                    // SIGNAL STATUS
+                </div>
+
+                <h2 class="panel-title">
+                    Open for Collaboration
+                </h2>
+
+                <p class="panel-text">
+                    Currently available for software development,
+                    robotics projects, UI/UX concepts, IT support,
+                    collaborative systems, and future-focused
+                    technology development opportunities.
+                </p>
+
+                <div class="info-box">
+                    <div class="info-label">
+                        EMAIL
+                    </div>
+
+                    <div class="info-value">
+                        akmalhakimazuan@gmail.com
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-label">
+                        STATUS
+                    </div>
+
+                    <div class="info-value">
+                        Available for Opportunities
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-label">
+                        LOCATION
+                    </div>
+
+                    <div class="info-value">
+                        Malaysia
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div class="info-label">
+                        SPECIALIZATION
+                    </div>
+
+                    <div class="info-value">
+                        IT · Software · Robotics · UI/UX
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-    </div>
 
-    <!-- Page Content -->
-    <div class="content-wrapper card-section">
+    </section>
 
-        <!-- Right: Text content -->
-        <div class="content-right">
-            <h1>Press the buttons below for my contacts!</h1>
+    <!-- ── FOOTER ── -->
+    <footer>
+        <span>ADALWOLFER TECHNOLOGIES</span> · CONTACT TERMINAL · © 2026
+    </footer>
 
-            <div class="contact-icons">
-            <a href="https://youtube.com/@akmalhakimazuan/" target="_blank" class="contact-card">
-                <img src="pics/youtube.png" alt="YouTube">
-                <span>YouTube</span>
-            </a>
-
-            <a href="https://instagram.com/dannyrucariaworks/" target="_blank" class="contact-card">
-                <img src="pics/instagram.png" alt="Instagram">
-                <span>Instagram</span>
-            </a>
-
-            <a href="mailto:akmalhakimazuan@gmail.com" class="contact-card">
-                <img src="pics/gmail.png" alt="Gmail">
-                <span>Gmail</span>
-            </a>
-
-            <a href="https://www.linkedin.com/in/akmal-hakim-azuan-37435533a/" target="_blank" class="contact-card">
-                <img src="pics/linkedin.png" alt="LinkedIn">
-                <span>LinkedIn</span>
-            </a>
-
-            <a href="https://github.com/dannyrucaria/" target="_blank" class="contact-card">
-                <img src="pics/github.png" alt="GitHub">
-                <span>GitHub</span>
-            </a>
-        </div>
-    </div>
-</div>
-
-    <script>
-        // Hamburger menu toggle
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
-
-        // Digital clock
-        function updateClock() {
-            const clock = document.getElementById('clock');
-            const now = new Date();
-            clock.textContent = now.toLocaleTimeString();
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
+    <!-- ── SCRIPT ── -->
+    <script src="js/contact_script.js"></script>
 </body>
+
 </html>

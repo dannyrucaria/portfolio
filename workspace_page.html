@@ -1,22 +1,24 @@
+<!-- ── WORKSPACE PAGE ── -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/workshop_styles.css">
-    <title>Akmal's Workspace</title>
-
-    <!-- Favicon -->
+    <title>Workspace Archives | Adalwolfer Technologies</title>
     <link rel="icon" type="image/png" href="pics/branding.png">
-
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/workspace_style.css">
 </head>
+
 <body>
-    <!-- Top Navigation -->
-    <div class="topnav">
-        <div class="logo">
-            <img src="pics/branding2.png" alt="Logo">
-            <div class="clock" id="clock">00:00:00</div>
+    <!-- ── NAV STARTS HERE ── -->
+    <nav class="topnav">
+        <div class="nav-logo">
+            <img src="pics/branding.png" alt="Adalwolfer Logo">
+            <div class="nav-brand">
+                Adalwolfer
+                <span>Technologies</span>
+            </div>
         </div>
         <div class="nav-links">
             <a href="main_page.html">Home</a>
@@ -24,10 +26,9 @@
             <a href="portfolio_page.html">Portfolio</a>
             <a href="contact_page.html">Contact</a>
         </div>
+        <div class="nav-clock" id="clock">00:00:00</div>
         <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div></div><div></div><div></div>
         </div>
         <div class="side-menu" id="sideMenu">
             <a href="main_page.html">Home</a>
@@ -35,167 +36,751 @@
             <a href="portfolio_page.html">Portfolio</a>
             <a href="contact_page.html">Contact</a>
         </div>
-    </div>
+    </nav>
+    <!-- ── NAV ENDS HERE ── -->
 
-    <!-- Carousel 1: Workspace Image -->
-    <div class="carousel">
-        <div class="slides">
-            <img src="pics/workshop_img1.png" alt="Slide 1">
+    <!-- ── HERO STARTS HERE ── -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">
+                // PROJECT DATABASE INITIALIZED
+            </p>
+
+            <h1 class="hero-title">
+                Workspace <span class="accent">Archives</span>
+            </h1>
+
+            <p class="hero-tagline">
+                Robotics simulations, Android systems, AI development,
+                ROS2 experimentation, and future technology prototypes.
+            </p>
         </div>
-    </div>
+    </section>
+    <!-- ── HERO ENDS HERE ── -->
 
-    <!-- Project 1 -->
-    <div class="project">
-        <div class="project-back">
-            <div class="project-header">
-                <h2>2025 - Miniature Patrol Car Using ROS2 & Gazebo</h2>
-                <span class="project-meta">ROS2 • RViz2 • Gazebo • Ubuntu • Blender • Simulation</span>
+<div class="section-divider"></div>
+
+    <!-- ── OPERATIONAL OVERVIEW STARTS HERE ── -->
+    <section class="section">
+        <p class="section-label">Operational Overview</p>
+        <h2 class="section-title">Project Statistics</h2>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+                <h3>03</h3>
+                <p>Featured Projects</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>06+</h3>
+                <p>Core Technologies</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>02</h3>
+                <p>ROS2 Simulations</p>
+            </div>
+
+            <div class="stat-card">
+                <h3>01</h3>
+                <p>AI Recommendation System</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- ── OPERATIONAL OVERVIEW ENDS HERE ── -->
+
+<div class="section-divider"></div>
+
+    <!-- ── PROJECT CONTROL CENTER STARTS HERE ── -->
+    <section class="section">
+        <p class="section-label">Project Control Center</p>
+        <h2 class="section-title">Workspace Database</h2>
+
+        <div class="workspace-controls">
+
+            <input type="text" id="projectSearch" placeholder="Search projects, technologies, or keywords...">
+
+            <select id="projectFilter">
+                <option value="all">All Categories</option>
+                <option value="robotics">Robotics</option>
+                <option value="simulation">Simulation</option>
+                <option value="android">Android</option>
+                <option value="ai">AI Systems</option>
+                <option value="server">Server Infrastructure</option>
+            </select>
+        </div>
+
+        <div class="projects-grid">
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card" data-category="server">
+
+                <div class="project-gallery">
+                    <img src="pics/raid1_1.png">
+                    <img src="pics/raid1_2.png">
+                    <img src="pics/raid1_3.png">
+                    <img src="pics/raid1_4.png">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-topbar">
+                        <span class="project-year">2026</span>
+                        <span class="status complete">COMPLETED</span>
+                    </div>
+
+                    <h2 class="project-title">
+                        RAID 1 Server Configuration & Data Migration
+                    </h2>
+
+                    <div class="tech-tags">
+                        <span>Hardware Replacement</span>
+                        <span>FreeFileSync</span>
+                        <span>Disk Management</span>
+                        <span>Task Scheduler</span>
+                        <span>MS Word</span>
+                        <span>Canva</span>
+                    </div>
+
+                    <table class="project-table">
+                        <tr>
+                            <td>Category</td>
+                            <td>Server Infrastructure Upgrade</td>
+                        </tr>
+                        <tr>
+                            <td>Environment</td>
+                            <td>Windows Server 2022 Standard</td>
+                        </tr>
+                        <tr>
+                            <td>Focus</td>
+                            <td>Server Redundancy & Downtime Prevention</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Completed</td>
+                        </tr>
+                    </table>
+
+                    <details>
+                        <summary>Read More</summary>
+                        <p>
+                            This project involved upgrading and restructuring the organization's existing server
+                            storage infrastructure by implementing a RAID 1 mirrored storage configuration for
+                            redundancy and reliability.
+                            <br><br>
+                            The deployment process included hardware preparation, HDD replacement, RAID 1
+                            configuration using Windows Disk Management, data migration from SSD storage,
+                            automated weekly backups using FreeFileSync and Task Scheduler, and redundancy testing
+                            to ensure operational stability during drive failure scenarios.
+                            <br><br>
+                            The primary objective was to reduce server downtime risks, improve backup reliability,
+                            and establish a more scalable and maintainable storage infrastructure environment.
+                        </p>
+                    </details>
+
+                    <div class="project-links">
+                        <a href="files/raid1_server_documentation.pdf" target="_blank">
+                            View Documentation
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card" data-category="hardware">
+
+                <div class="project-gallery">
+                    <img src="pics/pcbuild1-1.png">
+                    <img src="pics/pcbuild1-2.png">
+                    <img src="pics/pcbuild1-3.png">
+                    <img src="pics/pcbuild1-4.png">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-topbar">
+                        <span class="project-year">2026</span>
+                        <span class="status complete">COMPLETED</span>
+                    </div>
+
+                    <h2 class="project-title">
+                        Personal Project: Custom Gaming PC Build Under RM2000
+                    </h2>
+
+                    <div class="tech-tags">
+                        <span>Hardware Assembly</span>
+                        <span>Cable Management</span>
+                        <span>Windows 11 Installation</span>
+                        <span>Performance Testing</span>
+                        <span>Disk Management</span>
+                    </div>
+
+                    <table class="project-table">
+                        <tr>
+                            <td>Category</td>
+                            <td>Custom Computer Building</td>
+                        </tr>
+                        <tr>
+                            <td>Environment</td>
+                            <td>Personal Workspace Setup</td>
+                        </tr>
+                        <tr>
+                            <td>Focus</td>
+                            <td>Hands-On PC Building Experience</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Finished</td>
+                        </tr>
+                    </table>
+
+                    <details>
+                        <summary>Read More</summary>
+
+                        <p>
+                            A month-long personal computer building project focused on assembling
+                            and configuring a capable mid-range workstation and gaming system within
+                            a strict RM2000 budget constraint.
+                            <br><br>
+
+                            The project involved researching hardware compatibility, sourcing
+                            cost-efficient components, assembling and configuring the system,
+                            installing Windows 11, organizing internal cable management,
+                            configuring storage drives, and optimizing overall system stability
+                            for long-term usage.
+                            <br><br>
+
+                            The completed build utilized an Intel i5-12400F and AMD Radeon RX 6600,
+                            achieving stable 60 FPS gameplay in Tekken 8 and EA Sports FC 24
+                            at high settings, while maintaining higher frame rates in other
+                            optimized titles depending on graphical configurations.
+                            <br><br>
+
+                            The entire build was completed at an overall cost of approximately
+                            RM1870, while equivalent current Malaysian market pricing for the
+                            full system is estimated between RM2700 and RM3000.
+                            <br><br>
+
+                            The project emphasized practical technical experience, hardware
+                            compatibility understanding, thermal and airflow awareness,
+                            troubleshooting during assembly and setup, operating system deployment,
+                            and real-world PC optimization for gaming and productivity workloads.
+                        </p>
+
+                        <ul class="project-points">
+                            <li>Intel Core i5-12400F</li>
+                            <li>ASUS PRIME H610M-K</li>
+                            <li>Sapphire Radeon RX6600</li>
+                            <li>Kingston Fury 16GB RAM (2x8GB)</li>
+                            <li>Cooler Master MWE Gold 80 PSU</li>
+                            <li>Apacer 256GB SSD + 1TB Seagate Barracuda HDD</li>
+                            <li>Slevcase Chassis</li>
+                            <li>ThinkCentre Monitor</li>
+                        </ul>
+
+                    </details>
+
+                    <div class="project-links">
+                        <a href="docs/personal_pc_build.pdf" target="_blank">
+                            View Documentation
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <!-- PROJECT 3 -->
+
+            <div class="project-card" data-category="web development">
+
+                <div class="project-gallery">
+                    <img src="pics/majid1-1.png">
+                    <img src="pics/majid1-2.png">
+                    <img src="pics/majid1-3.png">
+                    <img src="pics/majid1-4.png">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-topbar">
+                        <span class="project-year">2026</span>
+                        <span class="status complete">STABLE VERSION</span>
+                    </div>
+
+                    <h2 class="project-title">
+                        Majid & Associates Main Website Development
+                    </h2>
+
+                    <div class="tech-tags">
+                        <span>Java</span>
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>CPanel</span>
+                        <span>VSCode</span>
+                        <span>Canva</span>
+                        <span>Adobe Photoshop</span>
+                    </div>
+
+                    <table class="project-table">
+                        <tr>
+                            <td>Category</td>
+                            <td>Corporate Website Development</td>
+                        </tr>
+                        <tr>
+                            <td>Environment</td>
+                            <td>Windows 11 + Visual Studio Code</td>
+                        </tr>
+                        <tr>
+                            <td>Focus</td>
+                            <td>Professional Company Web Presence</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Stable Production Version</td>
+                        </tr>
+                    </table>
+
+                    <details>
+                        <summary>Read More</summary>
+
+                        <p>
+                            A professional corporate website development project created for
+                            Majid & Associates Sdn. Bhd., focusing on modern presentation,
+                            company visibility, responsive web design, and structured
+                            information delivery for clients and visitors.
+                            <br><br>
+
+                            The project involved designing and developing the website layout,
+                            optimizing responsive user interface behavior, organizing company
+                            information architecture, preparing branding assets, and managing
+                            deployment through CPanel hosting environments.
+                            <br><br>
+
+                            Additional focus was placed on improving readability, accessibility,
+                            visual consistency, and long-term maintainability while ensuring
+                            stable performance across desktop and mobile devices.
+                        </p>
+
+                        <ul class="project-points">
+                            <li>Developed responsive corporate website structure</li>
+                            <li>Configured hosting deployment through CPanel</li>
+                            <li>Designed company branding assets and visuals</li>
+                            <li>Implemented structured frontend layouts using HTML & CSS</li>
+                            <li>Integrated PHP-based web functionality</li>
+                            <li>Optimized website readability and user experience</li>
+                        </ul>
+
+                    </details>
+
+                    <div class="project-links">
+
+                        <a href="https://www.majid.com.my" target="_blank">
+                            Visit Website
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECT 4 -->
+
+            <div class="project-card" data-category="robotics">
+
+                <div class="project-gallery">
+                    <img src="pics/project0_1.png">
+                    <img src="pics/project0_2.png">
+                    <img src="pics/project0_3.png">
+                    <img src="pics/project0_4.png">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-topbar">
+                        <span class="project-year">2025</span>
+                        <span class="status complete">COMPLETED</span>
+                    </div>
+
+                    <h2 class="project-title">
+                        Miniature Patrol Car Using ROS2 & Gazebo
+                    </h2>
+
+                    <div class="tech-tags">
+                        <span>ROS2</span>
+                        <span>Gazebo</span>
+                        <span>RViz2</span>
+                        <span>Ubuntu</span>
+                        <span>LiDAR</span>
+                        <span>Blender</span>
+                    </div>
+
+                    <table class="project-table">
+                        <tr>
+                            <td>Category</td>
+                            <td>Robotics Simulation</td>
+                        </tr>
+                        <tr>
+                            <td>Environment</td>
+                            <td>Gazebo Simulator</td>
+                        </tr>
+                        <tr>
+                            <td>Focus</td>
+                            <td>Navigation & Obstacle Avoidance</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Finished</td>
+                        </tr>
+                    </table>
+
+                    <details>
+                        <summary>Read More</summary>
+                        <p>
+                            A semi-autonomous ROS2 robot simulation developed inside a Gotham-inspired environment.
+                            The system integrates LiDAR and camera-based perception to perform environmental mapping,
+                            navigation stability, and dynamic obstacle avoidance while maintaining reliable autonomous behavior.
+                        </p>
+                    </details>
+
+                    <div class="project-links">
+                        <a href="https://github.com/dannyrucaria/ros2_workspace/tree/main/13.%20ROS2%20-%20Final%20Project" target="_blank">
+                            GitHub Repository
+                        </a>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="files/kyouth_certficate.pdf" target="_blank">
+                            View Certification
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PROJECT 5 -->
+
+            <div class="project-card" data-category="simulation">
+
+                <div class="project-gallery">
+                    <img src="pics/project1_1.png">
+                    <img src="pics/project1_2.png">
+                    <img src="pics/project1_3.png">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-topbar">
+                        <span class="project-year">2025</span>
+                        <span class="status complete">COMPLETED</span>
+                    </div>
+
+                    <h2 class="project-title">
+                        Batmobile & Batsuit ROS2 Simulation
+                    </h2>
+
+                    <div class="tech-tags">
+                        <span>ROS2</span>
+                        <span>RViz2</span>
+                        <span>Gazebo</span>
+                        <span>Simulation</span>
+                        <span>Blender</span>
+                    </div>
+
+                    <table class="project-table">
+                        <tr>
+                            <td>Category</td>
+                            <td>Environment Simulation</td>
+                        </tr>
+                        <tr>
+                            <td>Purpose</td>
+                            <td>Mapping & Visualization</td>
+                        </tr>
+                        <tr>
+                            <td>Framework</td>
+                            <td>ROS2 + RViz2</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Finished</td>
+                        </tr>
+                    </table>
+
+                    <details>
+                        <summary>Read More</summary>
+                        <p>
+                            A visualization and robotics mapping project emphasizing environmental awareness,
+                            navigation systems, and simulation realism. Focused heavily on spatial understanding
+                            and experimentation with futuristic autonomous vehicle concepts.
+                        </p>
+                    </details>
+
+                    <div class="project-links">
+                        <a href="https://github.com/dannyrucaria/ros2_workspace/tree/main/13.%20ROS2%20-%20Final%20Project" target="_blank">
+                            GitHub Repository
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROJECT 6 -->
+
+            <div class="project-card" data-category="ai android">
+
+                <div class="project-gallery">
+                    <img src="pics/project2_1.png">
+                    <img src="pics/project2_2.png">
+                    <img src="pics/project2_3.png">
+                    <img src="pics/project2_4.png">
+                </div>
+
+                <div class="project-content">
+
+                    <div class="project-topbar">
+                        <span class="project-year">2024 - 2025</span>
+                        <span class="status complete">COMPLETED</span>
+                    </div>
+
+                    <h2 class="project-title">
+                        Car Recommendation System Using Fuzzy Logic
+                    </h2>
+
+                    <div class="tech-tags">
+                        <span>Android</span>
+                        <span>Java</span>
+                        <span>SQLite</span>
+                        <span>Fuzzy Logic</span>
+                        <span>AI Recommendation</span>
+                    </div>
+
+                    <table class="project-table">
+                        <tr>
+                            <td>Category</td>
+                            <td>AI Mobile Application</td>
+                        </tr>
+                        <tr>
+                            <td>Platform</td>
+                            <td>Android Studio</td>
+                        </tr>
+                        <tr>
+                            <td>Database</td>
+                            <td>SQLite</td>
+                        </tr>
+                        <tr>
+                            <td>Status</td>
+                            <td>Final Year Project</td>
+                        </tr>
+                    </table>
+
+                    <details>
+                        <summary>Read More</summary>
+                        <p>
+                            A fuzzy logic-based Android recommendation system that analyzes user lifestyle,
+                            driving preferences, and practical needs to generate explainable ranked car recommendations.
+                            The application prioritizes usability, structured decision making, and real-world practicality.
+                        </p>
+                    </details>
+
+                </div>
+
             </div>
         </div>
-        <!-- Carousel 2 -->
-        <div class="carousel">
-            <div class="slides">
-                <img src="pics/project0_1.png" alt="Slide 1">
-                <img src="pics/project0_2.png" alt="Slide 2">     
-                <img src="pics/project0_3.png" alt="Slide 3">
-                <img src="pics/project0_4.png" alt="Slide 4">
-                <img src="pics/project0_5.png" alt="Slide 5">     
-                <img src="pics/project0_6.png" alt="Slide 6">      
-                <img src="pics/project0_7.png" alt="Slide 7">
-            </div>
-            <!-- Navigation buttons -->
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>  
-        <p class="project-desc">
-            A semi-autonomous ROS 2 mobile robot simulation developed in a Gazebo-based 
-            Gotham-inspired environment. The project focuses on stable navigation, sensor-based
-            perception, and coordinated mission control in a complex and hazardous setting. 
-            The robot integrates LiDAR and vision sensors to perceive its surroundings, 
-            interpret visual cues, and avoid dynamic obstacles while maintaining reliable 
-            autonomous behavior with optional human intervention.
-            <br><br>
-              Source:
-                <a href="https://github.com/dannyrucaria/ros2_workspace/tree/main/13.%20ROS2%20-%20Final%20Project"
-                    target="_blank" rel="noopener noreferrer">
-                    GitHub Repository
-                </a>
-        </p>
-    </div>
+    </section>
+    <!-- ── PROJECT CONTROL CENTER ENDS HERE ── -->
 
-    <!-- Project 2 -->
-    <div class="project">
-        <div class="project-back">
-            <div class="project-header">
-                <h2>2025 - Batmobile & Batsuit Using ROS2 & Gazebo Sim</h2>
-                <span class="project-meta">ROS2 • RViz2 • Gazebo • Ubuntu • Blender • Simulation</span>
+<div class="section-divider"></div>
+
+    <!-- ── TECHNOLOGY ANALYSIS STARTS HERE ── -->
+    <section class="section">
+        <p class="section-label">Technology Analysis</p>
+        <h2 class="section-title">Technology Distribution</h2>
+
+        <div class="tech-distribution">
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>ROS2</span>
+                    <span>90%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:90%"></div>
+                </div>
             </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>Gazebo Simulation</span>
+                    <span>85%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:85%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>Android Development</span>
+                    <span>80%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:80%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>Fuzzy Logic / AI Systems</span>
+                    <span>78%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:78%"></div>
+                </div>
+            </div>
+
+            <!-- ── Software Development ── -->
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>Java</span>
+                    <span>85%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:85%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>Python</span>
+                    <span>80%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:80%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>C++</span>
+                    <span>75%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:75%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>HTML + CSS</span>
+                    <span>90%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:90%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>PHP</span>
+                    <span>78%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:78%"></div>
+                </div>
+            </div>
+
+            <!-- ── Database & Web Stack ── -->
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>OracleDB</span>
+                    <span>70%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:70%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>phpMyAdmin</span>
+                    <span>75%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:75%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>XAMPP</span>
+                    <span>80%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:80%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>WordPress</span>
+                    <span>70%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:70%"></div>
+                </div>
+            </div>
+
+            <!-- ── IT / Hardware Skills ── -->
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>Hardware Troubleshooting</span>
+                    <span>85%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:85%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>Server Management</span>
+                    <span>80%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:80%"></div>
+                </div>
+            </div>
+
+            <div class="dist-item">
+                <div class="dist-label">
+                    <span>Disk Management (RAID / Storage)</span>
+                    <span>82%</span>
+                </div>
+                <div class="dist-bar">
+                    <div class="dist-fill" style="width:82%"></div>
+                </div>
+            </div>
+
         </div>
-        <!-- Carousel 3 -->
-        <div class="carousel">
-            <div class="slides">
-                <img src="pics/project1_1.png" alt="Slide 1">
-                <img src="pics/project1_2.png" alt="Slide 2">     
-                <img src="pics/project1_3.png" alt="Slide 3">        
-            </div>
-            <!-- Navigation buttons -->
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>
-        
-        <p class="project-desc">
-            A robotics simulation project focused on environment mapping and
-            visualization using ROS2 and RViz. Emphasis on spatial awareness and
-            navigation logic.
-            <br><br>
-            Source:
-            <a href="https://github.com/dannyrucaria/ros2_workspace/tree/main/13.%20ROS2%20-%20Final%20Project"
-                    target="_blank" rel="noopener noreferrer">
-                    GitHub Repository
-            </a>
-        </p>
-    </div>
+    </section>
+    <!-- ── TECHNOLOGY ANALYSIS ENDS HERE ── -->
 
-    <!-- Project 3 -->
-    <div class="project">
-        <div class="project-back">
-            <div class="project-header">
-                <h2>2024 to 2025 - Car Recommendation Using Fuzzy Logic</h2>
-                <span class="project-meta">FYP • Android App • Java • SQLite • Fuzzy Logic • Android Studio (Ubuntu)</span>
-            </div>
-        </div>
-        <!-- Carousel 4 -->
-        <div class="carousel">
-            <div class="slides">
-                <img src="pics/project2_1.png" alt="Slide 1">
-                <img src="pics/project2_2.png" alt="Slide 2">     
-                <img src="pics/project2_3.png" alt="Slide 3">
-                <img src="pics/project2_4.png" alt="Slide 4">
-                <img src="pics/project2_5.png" alt="Slide 5">     
-                <img src="pics/project2_6.png" alt="Slide 6">
-                <img src="pics/project2_7.png" alt="Slide 7">
-                <img src="pics/project2_8.png" alt="Slide 8">     
-                <img src="pics/project2_9.png" alt="Slide 9">
-                <img src="pics/project2_10.png" alt="Slide 10">
-                <img src="pics/project2_11.png" alt="Slide 11">     
-                <img src="pics/project2_12.png" alt="Slide 12">              
-                <img src="pics/project2_13.png" alt="Slide 13">
-                <img src="pics/project2_14.png" alt="Slide 14">     
-                <img src="pics/project2_15.png" alt="Slide 15">
-                <img src="pics/project2_16.png" alt="Slide 16"> 
-            </div>
-            <!-- Navigation buttons -->
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
-        </div>
-            <p class="project-desc">
-            A final year Android mobile application that recommends suitable cars 
-            based on user preferences using fuzzy logic decision-making. The system 
-            evaluates multiple lifestyle and usage factors to produce ranked, 
-            explainable recommendations, focusing on usability and real-world relevance.
-        </p>
-    </div>
-</div>
+    <!-- ── FOOTER ── -->
+    <footer>
+        <span>ADALWOLFER TECHNOLOGIES</span> · WORKSPACE ARCHIVES · © 2026
+    </footer>
 
-    <script>
-        // Hamburger menu toggle
-        function toggleMenu() {
-            const menu = document.getElementById('sideMenu');
-            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-        }
-
-        // Digital clock
-        function updateClock() {
-            const clock = document.getElementById('clock');
-            const now = new Date();
-            clock.textContent = now.toLocaleTimeString();
-        }
-        setInterval(updateClock, 1000);
-        updateClock();
-
-        // Initialize all carousels
-        document.querySelectorAll('.carousel').forEach((carousel) => {
-
-        const slides = carousel.querySelector('.slides');
-        const nextBtn = carousel.querySelector('.next');
-        const prevBtn = carousel.querySelector('.prev');
-
-        // Skip if no navigation buttons (like your first carousel)
-        if (!nextBtn || !prevBtn) return;
-
-        const images = slides.children;
-        let index = 0;
-
-        function showSlide(i) {
-            if (i < 0) i = images.length - 1;
-            if (i >= images.length) i = 0;
-            index = i;
-            slides.style.transform = `translateX(-${index * 100}%)`;
-        }
-
-        nextBtn.addEventListener('click', () => showSlide(index + 1));
-        prevBtn.addEventListener('click', () => showSlide(index - 1));
-    });
-    </script>
+    <!-- ── SCRIPT ── -->
+    <script src="js/workspace_script.js"></script>
 </body>
+
 </html>
