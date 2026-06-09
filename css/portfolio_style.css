@@ -1,3 +1,6 @@
+/* ══════════════════════════════════════
+    PORTFOLIO STYLE CSS
+══════════════════════════════════════ */
 :root {
     --wolf-dark:    #060810;
     --wolf-deep:    #0a0d1a;
@@ -43,7 +46,7 @@ body::before {
 }
 
 /* ══════════════════════════════════════
-NAV
+    NAV
 ══════════════════════════════════════ */
 .topnav {
     position: fixed;
@@ -240,7 +243,7 @@ NAV
 .hero-card {
     width: min(1200px, 100%);
     display: grid;
-    grid-template-columns: 1fr 420px;
+    grid-template-columns: 1fr;
     gap: 50px;
     align-items: center;
     padding: 50px;
@@ -535,7 +538,7 @@ NAV
 }
 
 /* ══════════════════════════════════════
-FOOTER
+    FOOTER
 ══════════════════════════════════════ */
 footer {
     border-top: 1px solid rgba(0,212,255,0.08);
@@ -554,24 +557,13 @@ footer span { color: rgba(0,212,255,0.5); }
 /* ══════════════════════════════════════
     ANIMATIONS
 ══════════════════════════════════════ */
-@media (max-width: 980px) {
-    .hero-card {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .nav-clock { display: none; }
+    .hamburger { display: flex; }
+    .topnav { padding: 0 1.2rem; }
 
-    .nav-links {
-        display: none;
-    }
+    .hero-card { padding: 28px; }
 
-    .topnav {
-        padding: 18px 20px;
-    }
-
-    .hero-card {
-        padding: 28px;
-    }
-
-    .section {
-        padding: 70px 20px;
-    }
+    .section { padding: 70px 20px; }
 }

@@ -1,3 +1,6 @@
+/* ══════════════════════════════════════
+    MAIN STYLE CSS
+══════════════════════════════════════ */
 :root {
     --wolf-dark:    #060810;
     --wolf-deep:    #0a0d1a;
@@ -835,8 +838,8 @@ footer span { color: rgba(0,212,255,0.5); }
     .nav-links { display: none; }
     .nav-clock { display: none; }
     .hamburger { display: flex; }
-
+    .topnav { padding: 0 1.2rem; }
+    
     .bio-grid { grid-template-columns: 1fr; }
     .bio-details-grid { grid-template-columns: 1fr; }
-    .topnav { padding: 0 1.2rem; }
 }
